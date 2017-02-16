@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: grey;
+    margin-top:0px;
+    padding-top: 0px;
+}
+

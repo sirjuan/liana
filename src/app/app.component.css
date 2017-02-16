@@ -1,0 +1,330 @@
+
+
+
+
+#container {
+    background-color: white;
+
+}
+
+#content {
+
+}
+
+#header {
+    background-color: #4C8930;
+    color: white;
+    padding: 8px;
+    text-align: right;
+    padding-right: 8%;
+}
+#header span {
+    padding-right: 16px;
+}
+#header select {
+    color: black;
+}
+#menuBar {
+ width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white !important;
+    height: 80px;
+    line-height: 80px;
+
+}
+
+.navbar .navbar-header {
+
+    background-color: white !important;
+        height: 80px;
+    line-height: 80px;
+
+}
+.navbar-default {
+    background-color: white;
+    border-color: white;
+}
+
+#menuBar img {
+    height: 40px;
+}
+
+
+#menuSearch {
+    text-align: right;
+
+}
+nav input {
+    width: 150px !important;
+}
+navbar div {
+    height: 32px;
+    line-height: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#mainImage {
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#mainImage img {
+    width: 100%;
+}
+#numbers {
+margin-left: auto;
+margin-right: auto;
+width: 65%;
+}
+#numbers img {
+    width: 30px;
+    vertical-align:middle;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+
+}
+#numbers p {
+    padding: 0px;
+    margin: 0px;
+    vertical-align:middle;
+       
+}
+.number {
+
+    font-size:1em;
+    line-height: 1em;
+}
+.numberItem {
+    margin-top: 20px;
+
+}
+.numberText {
+    font-size: 0.7em;
+}
+#news {
+    background-color: #ECEEEF;
+    margin-bottom: 32px;
+    padding-top: 16px;
+}
+
+#news h1 {
+    text-align: center;
+}
+
+#news .row {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.newsItem {
+    background-color: white;
+    border: 1px solid #ededed;
+  margin: 16px; 
+    padding: 16px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.date {
+    font-size: 0.8em;
+        color: #aeaeae;
+}
+#references {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 48px;
+    text-align: center;
+    
+}
+#references h1 {
+    margin-bottom: 32px;
+}
+.refs {
+    border: 1px solid #ededed;
+    margin: 16px; 
+    padding: 0px;
+   -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#references img {
+
+    float:left;
+
+}
+.refText {
+  
+    padding: 16px;
+
+}
+#newsletter {
+    padding-top: 16px;
+    padding-bottom: 32px;
+    border-top: 1px solid #ededed;
+    text-align: center;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    padding-bottom: 32px;
+    text-align: center;
+}
+#footer p {
+
+}
+
+#footer .right {
+    margin: 16px;
+}
+.footerRight {
+    text-align: center;
+    margin-top: 32px;
+}
+.footerRight span {
+    margin-left: 20px;
+}
+
+#socialButtons {
+    margin-top: 40px;
+}
+
+.smGlobalBtn { /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+       padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 27px;
+    -moz-border-radius:27px;
+    -webkit-border-radius:27px;
+}
+
+/* facebook button class*/
+.facebookBtn{
+    background: #4C8930;
+}
+
+.facebookBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a"; /* add facebook icon */
+}
+
+/* twitter button class*/
+.twitterBtn{
+    background: #4C8930;
+}
+
+.twitterBtn:before{
+      font-family: "FontAwesome";
+      content: "\f099"; /* add twitter icon */
+      
+}
+
+/* linkedin button class*/
+.linkedinBtn{
+    background: #4C8930;
+}
+
+.linkedinBtn:before{
+      font-family: "FontAwesome";
+      content: "\f0e1"; /* add linkedin icon */
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+    }
+.number {
+
+    font-size:2em;
+    line-height: 1em;
+}
+.numberItem {
+    margin-top: 20px;
+
+}
+.numberText {
+    font-size: 0.9em;
+}
+#numbers img {
+    width: 40px;
+    vertical-align:middle;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+
+}
+#footer {
+    background-color: black;
+    color: white;
+    padding-bottom: 48px;
+}
+#footer p {
+    padding: 0px;
+    margin: 0px;
+}
+
+#footer .right {
+    float:right;
+}
+.footerRight {
+    text-align: right;
+    margin-top: 20px;
+}
+.footerRight span {
+    margin-left: 20px;
+}
+
+#socialButtons {
+    margin-top: 40px;
+}
+#references {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 48px;
+    text-align: center;
+    
+}
+#references h1 {
+    margin-bottom: 32px;
+}
+.refs {
+    border: 1px solid #ededed;
+    margin: 16px; 
+    padding: 0px;
+   -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#references img {
+    border-bottom: 1px solid #ededed;
+
+}
+.refText {
+  
+    padding: 16px;
+
+}
+}
