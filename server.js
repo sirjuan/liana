@@ -13,7 +13,7 @@ app.listen(app.get('port'), function () {
     console.log("You're a wizard, Harry. I'm a what? Yes, a wizard, on port: ", app.get('port'));
 });
 
-app.post("/api/post", function(req, res) {
+app.post("/api/post/", function(req, res) {
     console.log(req);
     console.log(req.body);
     var data = {
