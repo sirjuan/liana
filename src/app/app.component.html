@@ -156,9 +156,9 @@ IKEA is a multinational furniture store.
       <p>Follow our story and get the later promotonial <br>news about our products and events</p>
       <form class="form-inline">
         <div class="form-group">
-          <input type="email" class="form-control" placeholder="Your email address">
+          <input [(ngModel)]="email")] type="email" class="form-control" placeholder="Your email address">
         </div>
-        <button type="submit" class="btn btn-success">Subscribe</button>
+        <button type="submit" (click)="subscribeNewsletter(email)" class="btn btn-success">Subscribe</button>
       </form>
     </div>
   </div>

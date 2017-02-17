@@ -15,8 +15,6 @@ app.listen(app.get('port'), function () {
 });
 
 app.post("/api/post/", function(req, res) {
-    console.log(req);
-    console.log(req.body);
     var data = {
         from: 'Liana Technologies <newsletter@lianatech.com>',
         to: req.body.email,

@@ -66,10 +66,13 @@ export class AppComponent implements OnInit {
     })
   }
 
-    subscribe(email) {
-    return this.http.get(email)
-               .map(res => res.json())
-               .catch(this.handleError);
+  subscribe(email): Observable<any> {
+    let body = JSON.stringify({email: email});
+    let headers = new Headers({'Content-Type': 'application/json'});
+    let url = 'https://warm-sands-84114.herokuapp.com/api/post';
+    return this.http.post(url, body, {headers: headers})
+                    .map(res => res.json())
+                    .catch(this.handleError);
   }
 
     handleError(error) {
