@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.set('port', process.env.PORT || 8080);
 app.use(cors()); // CORS (Cross-Origin Resource Sharing) headers to support Cross-site HTTP requests
 app.use(express.static(__dirname + '/dist'));
+console.log(__dirname);
 
 app.listen(app.get('port'), function () {
     console.log("You're a wizard, Harry. I'm a what? Yes, a wizard, on port: ", app.get('port'));
