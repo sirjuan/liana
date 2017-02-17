@@ -14,18 +14,27 @@ app.listen(app.get('port'), function () {
 });
 
 app.get("/api/post/:email", function(req, res) {
-    console.log(req.params.email);
+
     var data = {
         from: 'Liana Technologies <newsletter@lianatech.com>',
         to: req.params.email,
         subject: 'Your subscription',
         text: 'Thank you for subscribing to Liana Technologies newsletter!'
     };
-    console.log(data);
 
     mailgun.messages().send(data, function (error, body) {
-        console.log(error);
-    console.log(body);
-    });
+        if (err) {
+        handleError(res, error, "Failed to send email");
+        } else {
+        res.status(200);
+        console.log('Succeeded sending mail')
+        }       
+        });
 
 });
+
+// Error handler for the api
+function handleError(res, reason, message, code) {
+console.log("API Error: " + reason);
+res.status(code || 500).json({"Error": message});
+}
