@@ -1,7 +1,8 @@
 var api_key = 'key-2cd3537191d3a31aac7bc257dc32713d';
 var domain = 'app1e2584f97c124280b097ef401a2095f9.mailgun.org';
 var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+var cors = require('cors');
 var express = require('express');
 var app = express();
 

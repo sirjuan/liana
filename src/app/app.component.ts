@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FeedService } from './feed.service';
+import { Subscription} from './model/subscription';
 
 // Add the RxJS Observable operators we need in this app.
 import {Observable} from 'rxjs/Rx';
@@ -18,10 +19,12 @@ export class AppComponent implements OnInit {
     public clients: number = 0;
     public employees: number = 0;
     public users: number = 0;
-
+    public subscription: Subscription = {email: ''};
+    email;
     private feedUrl: string = 'http://www.lianatech.com/news/all-news.rss';
     private feeds: any;
         private feed: any;
+         public data: {email: string};
 
   constructor(private feedService: FeedService, private http: Http) {
     for (let i = 0; i < 10001; i = i + 100) {
@@ -58,6 +61,15 @@ export class AppComponent implements OnInit {
           },
             error => console.log(error));
   }
+  onSubmit() { 
+    console.log(this.subscription);
+   
+    this.subscription;
+    this.subscribe(this.subscription.email)
+      .subscribe(data => {
+        console.log(data);
+    })
+  }
 
   subscribeNewsLetter(email) {
     this.subscribe(email)
@@ -68,9 +80,10 @@ export class AppComponent implements OnInit {
 
   subscribe(email): Observable<any> {
     let body = JSON.stringify({email: email});
+    console.log(body);
     let headers = new Headers({'Content-Type': 'application/json'});
-    let url = 'https://warm-sands-84114.herokuapp.com/api/post';
-    return this.http.post(url, body, {headers: headers})
+    let emailUrl = 'https://warm-sands-84114.herokuapp.com/api/post';
+    return this.http.post(emailUrl, body, {headers: headers})
                     .map(res => res.json())
                     .catch(this.handleError);
   }

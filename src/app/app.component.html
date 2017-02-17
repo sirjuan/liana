@@ -154,12 +154,27 @@ IKEA is a multinational furniture store.
     <div class="col-md-12">
       <h1>Subscribe to our newsletter</h1>
       <p>Follow our story and get the later promotonial <br>news about our products and events</p>
-      <form class="form-inline">
+      
+      <form (ngSubmit)="onSubmit()" #newsLetterForm="ngForm" class="form-inline">
         <div class="form-group">
-          <input [(ngModel)]="email")] type="email" class="form-control" placeholder="Your email address">
+
+
+<input type="email" class="form-control" id="email"
+               required
+               [(ngModel)]="subscription.email" 
+               name="email"
+               #name="ngModel"
+               placeholder="Your email address">
+
+
+        
         </div>
-        <button type="submit" (click)="subscribeNewsletter(email)" class="btn btn-success">Subscribe</button>
+        <button type="submit" class="btn btn-success">Subscribe</button>
       </form>
+              <div [hidden]="email.valid || email.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div>
     </div>
   </div>
 
