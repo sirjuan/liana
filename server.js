@@ -26,8 +26,8 @@ app.get("/api/post/:email", function(req, res) {
         if (error) {
         handleError(res, error, "Failed to send email");
         } else {
+        console.log('Succeeded sending mail');
         res.status(200);
-        console.log('Succeeded sending mail')
         }       
         });
 
