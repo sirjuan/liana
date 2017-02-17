@@ -6,7 +6,7 @@ var app = express();
 
 
 
-app.use(bodyParser.json());
+
 app.set('port', process.env.PORT || 8080); 
 
 app.listen(app.get('port'), function () {
