@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.set('port', process.env.PORT || 8080); 
 
 app.listen(app.get('port'), function () {
-    console.log("You're a wizard, Harry. I'm a what? Yes, a wizard, on port", app.get('port'));
+    console.log("You're a wizard, Harry. I'm a what? Yes, a wizard, on port: ", app.get('port'));
 });
 
 app.post("/api/post", function(req, res) {
