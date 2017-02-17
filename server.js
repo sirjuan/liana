@@ -1,12 +1,13 @@
 var api_key = 'key-2cd3537191d3a31aac7bc257dc32713d';
 var domain = 'app1e2584f97c124280b097ef401a2095f9.mailgun.org';
 var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+var bodyParser = require('body-parser')
 var express = require('express');
 var app = express();
 
 
 
-
+app.use(bodyParser.json());
 app.set('port', process.env.PORT || 8080); 
 
 app.listen(app.get('port'), function () {
@@ -33,6 +34,30 @@ app.post("/api/post/", function(req, res) {
         });
 
 });
+
+// POST: create a new post
+app.post("/api/posts", function(req, res) {
+var newPost = {
+    userId: req.body.userId,
+    userName: req.body.userName,
+    userProfilePictureUrl: req.body.userPhoto,
+    imageUrl: req.body.imageUrl,
+    caption: req.body.caption,
+    postTime: req.body.postTime,
+    tags: req.body.tags,
+    comments: [],
+    likes: []
+}
+
+db.collection("posts").insertOne(newPost, function(err, doc) {
+if (err) {
+handleError(res, err.message, "Failed to add post");
+} else {
+res.status(201).json(doc.ops[0]);
+}
+});
+});
+
 
 // Error handler for the api
 function handleError(res, reason, message, code) {
