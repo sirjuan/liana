@@ -23,7 +23,7 @@ app.get("/api/post/:email", function(req, res) {
     };
 
     mailgun.messages().send(data, function (error, body) {
-        if (err) {
+        if (error) {
         handleError(res, error, "Failed to send email");
         } else {
         res.status(200);
