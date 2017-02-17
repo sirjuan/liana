@@ -29,7 +29,7 @@ app.post("/api/post/", function(req, res) {
         handleError(res, error, "Failed to send email");
         } else {
         console.log('Succeeded sending mail');
-        res.status(201).json(body.ops[0]);
+        res.status(201).json(body);
         }       
         });
 
