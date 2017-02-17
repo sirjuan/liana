@@ -1,5 +1,5 @@
 var api_key = 'key-2cd3537191d3a31aac7bc257dc32713d';
-var domain = 'warm-sands-84114.herokuapp.com';
+var domain = 'https://warm-sands-84114.herokuapp.com';
 var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
 var express = require('express');
 var app = express();
