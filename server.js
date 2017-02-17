@@ -11,7 +11,7 @@ var app = express();
 app.use(bodyParser.json());
 app.set('port', process.env.PORT || 8080);
 app.use(cors()); // CORS (Cross-Origin Resource Sharing) headers to support Cross-site HTTP requests
-app.use('/static', express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist'));
 console.log(__dirname);
 
 app.listen(app.get('port'), function () {
