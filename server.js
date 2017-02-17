@@ -13,11 +13,11 @@ app.listen(app.get('port'), function () {
     console.log("You're a wizard, Harry. I'm a what? Yes, a wizard, on port: ", app.get('port'));
 });
 
-app.get("/api/post/:email", function(req, res) {
+app.post("/api/post", function(req, res) {
 
     var data = {
         from: 'Liana Technologies <newsletter@lianatech.com>',
-        to: req.params.email,
+        to: req.body.email,
         subject: 'Your subscription',
         text: 'Thank you for subscribing to Liana Technologies newsletter!'
     };
@@ -27,7 +27,7 @@ app.get("/api/post/:email", function(req, res) {
         handleError(res, error, "Failed to send email");
         } else {
         console.log('Succeeded sending mail');
-        res.status(200);
+        res.status(201).json(body.ops[0]);
         }       
         });
 
