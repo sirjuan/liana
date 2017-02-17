@@ -29,25 +29,31 @@
     margin-left: auto;
     margin-right: auto;
     background-color: white !important;
-    height: 80px;
-    line-height: 80px;
+
 
 }
 
-.navbar .navbar-header {
+.navbar .navbar-header .nav {
 
     background-color: white !important;
-        height: 80px;
-    line-height: 80px;
+        height: 60px;
+    line-height: 60px;
 
 }
 .navbar-default {
     background-color: white;
     border-color: white;
+    margin-bottom: 0px;
 }
 
 #menuBar img {
     height: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar-header .navbar-brand {
+    padding: 5px;
 }
 
 
@@ -56,7 +62,7 @@
 
 }
 nav input {
-    width: 150px !important;
+    width: 120px !important;
 }
 navbar div {
     height: 32px;
@@ -131,6 +137,10 @@ width: 65%;
     -moz-border-radius: 2px;
     border-radius: 2px;
 }
+a.newsItem{
+    text-decoration: none;
+    color: black;
+}
 .date {
     font-size: 0.8em;
         color: #aeaeae;
@@ -179,7 +189,7 @@ width: 65%;
     text-align: center;
 }
 #footer p {
-
+    font-size: 0.9em;
 }
 
 #footer .right {
@@ -278,6 +288,7 @@ width: 65%;
     background-color: black;
     color: white;
     padding-bottom: 48px;
+    text-align: left;
 }
 #footer p {
     padding: 0px;
@@ -296,7 +307,7 @@ width: 65%;
 }
 
 #socialButtons {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 #references {
     width: 90%;
@@ -320,10 +331,11 @@ width: 65%;
 
 #references img {
     border-bottom: 1px solid #ededed;
+    margin-bottom: 16px;
 
 }
 .refText {
-  
+    margin-top: 16px;
     padding: 16px;
 
 }

@@ -6,7 +6,7 @@
 
   <div class="btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    In English <span class="caret"></span>
+    In English <span class="glyphicon glyphicon-triangle-bottom" style="padding-right: 0px;"></span>
   </button>
   <ul class="dropdown-menu">
     <li><a href="#">In English</a></li>
@@ -65,7 +65,7 @@
         <img src="../assets/business.png" /> 
           </div>
           <div class="col-xs-7 col-md-7 numberItem">
-        <p class="number">300</p>
+        <p class="number">{{clients}}</p>
         <p class="numberText">Clients</p>
           </div>
         </div>
@@ -76,7 +76,7 @@
         <img src="../assets/face.png" /> 
           </div>
           <div class="col-xs-7 col-md-7 numberItem">
-        <p class="number">180</p>
+        <p class="number">{{employees}}</p>
         <p class="numberText">Employees</p>
           </div>
         </div>
@@ -87,7 +87,7 @@
         <img src="../assets/world.png" /> 
           </div>
           <div class="col-xs-7 col-md-7 numberItem">
-        <p class="number">10000</p>
+        <p class="number">{{users}}</p>
         <p class="numberText">Daily users</p>
           </div>
         </div>
@@ -99,24 +99,13 @@
   <div class="row" id="news">
     <h1>Latest news</h1>
     <div class="row row-eq-height" >
-      <div class="col-sm-4 col-md-4 col-lg-4 newsItem">
+      <a [href]="feed.link" class="col-sm-4 col-md-4 col-lg-4 newsItem" *ngFor="let feed of feeds">
         
-          <p class="date">27.7.2016</p>
-      Liana Technologies and Encode Solutions merge to create unique mobile solutions
+          <p class="date">{{feed.pubDate | date: 'dd.MM.yyyy'}}</p>
+      {{feed.title}}
  
-      </div>
-    <div class="col-sm-4 col-md-4 col-lg-4 newsItem">
-
-   <p class="date">27.7.2016</p>
-      From a local startup to a global player: Liana Technologies among the forerunners of digital marketing technology
-
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4 newsItem">
-
-  <p class="date">27.7.2016</p>
-      Liana Technologies Hong Kong launched a series of digital marketing events in June
-
-    </div>
+      </a>
+    
   </div>
   </div>
 
@@ -178,9 +167,9 @@ IKEA is a multinational furniture store.
     <div class="col-md-1"></div>
     <div class="col-sm-5 col-md-4">
       <h3>Liana Technologies</h3>
-      
+       <button class="btn btn-success right">Contact us</button>
       <p style="font-weight: bold;">Sales and inquiries</p>
-      <button class="btn btn-success right">Contact us</button>
+     
       <p>Email: sales@lianatech.com</p>
       <p>Phone: +358 10 387 7053</p>
       
