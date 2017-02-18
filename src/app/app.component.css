@@ -116,7 +116,7 @@ navbar div {
 #numbers {
 margin-left: auto;
 margin-right: auto;
-width: 65%;
+width: 100%;
 }
 #numbers img {
     width: 30px;
@@ -200,13 +200,14 @@ a.newsLink {
 
 #references img {
 
-    float:left;
+ margin-left:auto;
+ margin-right: auto;
 
 }
 
 .refText {
     font-size: 0.8em;
-    padding: 16px;
+    padding: 0px 16px 16px 16px;
 
 }
 #newsletter {
@@ -381,5 +382,46 @@ a.newsLink {
     font-size: 3em;
     font-weight: lighter;
     margin-top: 150px;
+}
+}
+@media only screen and (min-width: 500px) {
+    /* For tablet: */
+#numbers {
+    width: 65%;
+}
+.parallaxText {
+    color:white;
+    font-size: 2em;
+    font-weight: lighter;
+    margin-top: 150px;
+}
+#references {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 48px;
+    text-align: center;
+    
+}
+
+.refs {
+    border: 1px solid #ededed;
+    margin: 8px; 
+    padding: 0px;
+   -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#references img {
+
+    float:left;
+
+}
+
+.refText {
+    font-size: 0.8em;
+    padding: 16px;
+
 }
 }
