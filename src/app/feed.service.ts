@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { Feed } from './model/feed';
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/Rx';
-import { Feed } from './model/feed';
-import 'rxjs/add/operator/take';
+
 
 @Injectable()
 export class FeedService {
 
   private rssToJsonServiceBaseUrl: string = 'https://rss2json.com/api.json?rss_url=';
 
-  constructor(
-    private http: Http
-  ) { }
+  constructor( private http: Http ) { }
 
+  // Http get feed from liana server and map it to json format
   getFeedContent(url: string): Observable<Feed> {
     return this.http.get(this.rssToJsonServiceBaseUrl + url)
             .map(this.extractFeeds)
@@ -22,14 +21,10 @@ export class FeedService {
 
   private extractFeeds(res: Response): Feed {
     let feed = res.json();
-    console.log(feed);
-  
     return feed || { };
   }
 
   private handleError (error: any) {
-    // In a real world app, we might use a remote logging infrastructure
-    // We'd also dig deeper into the error to get a better message
     let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error(errMsg); // log to console instead

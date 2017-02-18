@@ -8,6 +8,8 @@ import { FeedService } from './feed.service';
 import { FeedCardComponent } from './feed-card/feed-card.component';
 import { StripHtmlTagsPipe } from './pipe/strip-html-tags.pipe';
 
+import { Ng2ParallaxScrollModule } from 'ng2-parallax-scroll';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,7 @@ import { StripHtmlTagsPipe } from './pipe/strip-html-tags.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [FeedService],
+  providers: [FeedService, Ng2ParallaxScrollModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
