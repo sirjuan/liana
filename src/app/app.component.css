@@ -1,9 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
-body {
-    font-family: 'Open Sans', sans-serif !important;
-    font-size: 0.9em;
-}
+/* Reset bootstrap settings */
 h1 {
     font-size: 1.8em;
     text-align: center;
@@ -12,7 +7,6 @@ h5 {
     font-size: 1.3em;
     font-weight: bold;
 }
-    
 .icon-bar {
     background-color: #ddd !important;
 }
@@ -20,15 +14,11 @@ h5 {
     background-color: #4C8930 !important;
     border-color: #3C7520 !important
 }
+/* Container */
 #container {
     background-color: white;
-
 }
-
-#content {
-
-}
-
+/* Header */
 #header {
     background-color: #4C8930;
     color: white;
@@ -42,19 +32,12 @@ h5 {
 #header select {
     color: black;
 }
-#menuBar {
- width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
+/* Parallax picture + menubar */
 .parallax {
-    /* The image used */
     background-image: url("../assets/mainImage.png");
-
-    /* Set a specific height */
     min-height: 500px; 
-
-    /* Create the parallax scrolling effect */
+    margin-left: 15px;
+    margin-right: 15px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,17 +45,28 @@ h5 {
 }
 .parallaxText {
     color:white;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     margin-top: 150px;
 }
+#menuBar {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#menuBar img {
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+#menuSearch {
+    text-align: right;
+}
 .navbar .navbar-header .nav {
-
-        background-color: transparent;
-        height: 60px;
+    background-color: transparent;
+    height: 60px;
     line-height: 60px;
-
 }
 .navbar-default {
     background-color: transparent;
@@ -82,21 +76,11 @@ h5 {
 nav a {
     color: white;
 }
-#menuBar img {
-    height: 40px;
-    margin: 0px;
-    padding: 0px;
-}
 
 .navbar-header .navbar-brand {
     padding: 5px;
 }
 
-
-#menuSearch {
-    text-align: right;
-
-}
 nav input {
     width: 120px !important;
 }
@@ -106,50 +90,35 @@ navbar div {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#mainImage {
-
-    width: 100%;
+#numbers {
     margin-left: auto;
     margin-right: auto;
-}
-
-#numbers {
-margin-left: auto;
-margin-right: auto;
-width: 100%;
+    width: 100%;
 }
 #numbers img {
     width: 30px;
     vertical-align:middle;
     margin-top: 20px;
     margin-bottom: 20px;
-    
-
 }
 #numbers p {
     padding: 0px;
     margin: 0px;
     vertical-align:middle;
-       
 }
 .number {
-
     font-size:1em;
     line-height: 1em;
 }
 .numberItem {
     margin-top: 20px;
-
 }
 .numberText {
     font-size: 0.7em;
 }
 #news {
     background-color: #ECEEEF;
-    
-    
 }
-
 #news .row {
     width: 85%;
     margin-left: auto;
@@ -157,7 +126,6 @@ width: 100%;
     margin-bottom: 24px;
     margin-top: 24px;
 }
-
 .newsItem {
     background-color: white;
     border: 1px solid #ededed;
@@ -186,7 +154,6 @@ a.newsLink {
     margin-right: auto;
     padding-bottom: 48px;
     text-align: center;
-    
 }
 
 .refs {
@@ -199,10 +166,8 @@ a.newsLink {
 }
 
 #references img {
-
- margin-left:auto;
- margin-right: auto;
-
+    margin-left:auto;
+    margin-right: auto;
 }
 
 .refText {
@@ -253,7 +218,7 @@ a.newsLink {
     cursor: pointer;
     width: 30px;
     height: 30px;
-       padding: 0px;
+    padding: 0px;
     text-decoration: none;
     text-align: center;
     color: #fff;
@@ -351,21 +316,7 @@ a.newsLink {
     margin-top: 30px;
 }
 #references {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
     padding-bottom: 24px;
-    text-align: center;
-    
-}
-
-.refs {
-    border: 1px solid #ededed;
-    margin: 8px; 
-    padding: 0px;
-   -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
 }
 
 #references img {
@@ -374,14 +325,11 @@ a.newsLink {
 
 }
 .refText {
-    margin-top: 16px;
+
     padding: 16px;
 }
 .parallaxText {
-    color:white;
     font-size: 3em;
-    font-weight: lighter;
-    margin-top: 150px;
 }
 }
 @media only screen and (min-width: 500px) {
@@ -390,27 +338,7 @@ a.newsLink {
     width: 65%;
 }
 .parallaxText {
-    color:white;
     font-size: 2em;
-    font-weight: lighter;
-    margin-top: 150px;
-}
-#references {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 48px;
-    text-align: center;
-    
-}
-
-.refs {
-    border: 1px solid #ededed;
-    margin: 8px; 
-    padding: 0px;
-   -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
 }
 
 #references img {
@@ -420,8 +348,6 @@ a.newsLink {
 }
 
 .refText {
-    font-size: 0.8em;
     padding: 16px;
-
 }
 }
