@@ -5,8 +5,12 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var express = require('express');
 var app = express();
+var mongodb = require('mongodb'),
+mongoClient = mongodb.MongoClient,
+ObjectID = mongodb.ObjectID,
+db; 
 
-
+var MONGODB_URI = process.env.MONGODB_URI || 'mongodb://heroku_m3lztbds:T6u54KVcYTXTBi7xgNxhhKO5wYJ2cLnA@ds011863.mlab.com:11863/heroku_m3lztbds';
 
 app.use(bodyParser.json());
 app.set('port', process.env.PORT || 8080);
@@ -14,6 +18,17 @@ app.use(cors()); // CORS (Cross-Origin Resource Sharing) headers to support Cros
 app.use(express.static(__dirname + '/dist'));
 console.log(__dirname);
 
+// Initialize database connection and then start the server.
+mongoClient.connect(MONGODB_URI, function (err, database) {
+if (err) {
+process.exit(1);
+}
+
+db = database; // Our database object from mLab
+
+console.log("Database connection ready");
+
+// Initialize the app.
 app.listen(app.get('port'), function () {
     console.log("You're a wizard, Harry. I'm a what? Yes, a wizard, on port: ", app.get('port'));
 });
@@ -29,11 +44,23 @@ app.post("/api/post/", function(req, res) {
     mailgun.messages().send(data, function (error, body) {
         if (error) {
         handleError(res, error, "Failed to send email");
-        } else {
+    } else {
+        
+            db.collection("posts").insertOne(req.body, function(err, doc) {
+if (err) {
+handleError(res, err.message, "Failed to add post");
+} else {
+    console.log(hiphiphei)
+res.status(201).json(doc.ops[0]);
+}
+});
+
         console.log('Succeeded sending mail');
         res.status(201).json(body);
         }       
-        });
+    });
+    
+
 
 });
 
@@ -51,13 +78,7 @@ var newPost = {
     likes: []
 }
 
-db.collection("posts").insertOne(newPost, function(err, doc) {
-if (err) {
-handleError(res, err.message, "Failed to add post");
-} else {
-res.status(201).json(doc.ops[0]);
-}
-});
+
 });
 
 
