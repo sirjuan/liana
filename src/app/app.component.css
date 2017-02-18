@@ -1,7 +1,25 @@
 
-
-
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+body {
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 0.9em;
+}
+h1 {
+    font-size: 1.8em;
+    text-align: center;
+}
+h5 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+    
+.icon-bar {
+    background-color: #ddd !important;
+}
+.btn-success {
+    background-color: #4C8930 !important;
+    border-color: #3C7520 !important
+}
 #container {
     background-color: white;
 
@@ -28,24 +46,42 @@
  width: 90%;
     margin-left: auto;
     margin-right: auto;
-    background-color: white !important;
-
-
 }
+.parallax {
+    /* The image used */
+    background-image: url("../assets/mainImage.png");
 
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallaxText {
+    color:white;
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    margin-top: 150px;
+}
 .navbar .navbar-header .nav {
 
-    background-color: white !important;
+        background-color: transparent;
         height: 60px;
     line-height: 60px;
 
 }
 .navbar-default {
-    background-color: white;
-    border-color: white;
+    background-color: transparent;
+    border: none;
     margin-bottom: 0px;
 }
-
+nav a {
+    color: white;
+}
 #menuBar img {
     height: 40px;
     margin: 0px;
@@ -76,9 +112,7 @@ navbar div {
     margin-left: auto;
     margin-right: auto;
 }
-#mainImage img {
-    width: 100%;
-}
+
 #numbers {
 margin-left: auto;
 margin-right: auto;
@@ -112,38 +146,39 @@ width: 65%;
 }
 #news {
     background-color: #ECEEEF;
-    margin-bottom: 32px;
-    padding-top: 16px;
-}
-
-#news h1 {
-    text-align: center;
+    
+    
 }
 
 #news .row {
-    width: 80%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 32px;
-    margin-top: 32px;
+    margin-bottom: 24px;
+    margin-top: 24px;
 }
 
 .newsItem {
     background-color: white;
     border: 1px solid #ededed;
-  margin: 16px; 
+    margin: 8px; 
     padding: 16px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
+    line-height: 1.1em;
+    font-size: 0.9em;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
 }
-a.newsItem{
+a.newsLink {
     text-decoration: none;
-    color: black;
+    color: #555;
 }
 .date {
-    font-size: 0.8em;
-        color: #aeaeae;
+    font-size: 0.75em;
+    color: #aeaeae;
 }
 #references {
     width: 90%;
@@ -153,12 +188,10 @@ a.newsItem{
     text-align: center;
     
 }
-#references h1 {
-    margin-bottom: 32px;
-}
+
 .refs {
     border: 1px solid #ededed;
-    margin: 16px; 
+    margin: 8px; 
     padding: 0px;
    -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -170,8 +203,9 @@ a.newsItem{
     float:left;
 
 }
+
 .refText {
-  
+    font-size: 0.8em;
     padding: 16px;
 
 }
@@ -180,6 +214,11 @@ a.newsItem{
     padding-bottom: 32px;
     border-top: 1px solid #ededed;
     text-align: center;
+}
+#newsletter p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 0.9em;
 }
 
 #footer {
@@ -293,6 +332,7 @@ a.newsItem{
 #footer p {
     padding: 0px;
     margin: 0px;
+    font-size: 0.9em;
 }
 
 #footer .right {
@@ -313,16 +353,14 @@ a.newsItem{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 48px;
+    padding-bottom: 24px;
     text-align: center;
     
 }
-#references h1 {
-    margin-bottom: 32px;
-}
+
 .refs {
     border: 1px solid #ededed;
-    margin: 16px; 
+    margin: 8px; 
     padding: 0px;
    -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -337,6 +375,11 @@ a.newsItem{
 .refText {
     margin-top: 16px;
     padding: 16px;
-
+}
+.parallaxText {
+    color:white;
+    font-size: 3em;
+    font-weight: lighter;
+    margin-top: 150px;
 }
 }
