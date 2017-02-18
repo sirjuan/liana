@@ -5,7 +5,7 @@ import {Observable} from 'rxjs/Rx';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/take';
 import { Headers, Http  } from '@angular/http';
-import { Ng2ParallaxScrollModule } from 'ng2-parallax-scroll';
+
 
 @Component({
   selector: 'app-root',
